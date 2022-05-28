@@ -56,7 +56,7 @@ main > h1 {
 }
 
 #resultado {
-    border-radius: 0.5em;
+    border-radius: 1.5em;
     background-color: var(--cor5);
     color: white;
 }
@@ -158,7 +158,7 @@ main > h1 {
     }
 
     #resultado {
-        width: 300px;
+        width: 500px;
         margin: 5px auto;
         padding: 10px;
         min-height: 80px;
