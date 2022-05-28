@@ -55,12 +55,6 @@ main > h1 {
     border: black solid 2px;
 }
 
-
-hr {
-    border: rgba(0, 0, 0, 0.308) solid 1px;
-}
-
-
 #resultado {
     border-radius: 0.5em;
     background-color: var(--cor5);
