@@ -27,7 +27,7 @@ function maquinaEscreverAnimation(txt, elemento) {
         setTimeout(() => {
             let letra = document.createTextNode(txt[i])
             elemento.appendChild(letra)
-        }, 75 * i);
+        }, 20 * i);
     
     }
 }
