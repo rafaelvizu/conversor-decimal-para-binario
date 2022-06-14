@@ -1,18 +1,24 @@
 function convertorBinario(valorDecimal) {
-    let str = [], cont = 0
-    while (valorDecimal > 0) {
-        str.unshift("" + valorDecimal%2)
-        valorDecimal = Math.floor(valorDecimal/2)
-        if (cont == 3 && valorDecimal != 0) {
-            str.unshift(" ")
-            cont = 0
-        } else {
-            cont++
+    if (valorDecimal == 0) {
+        return "0"
+    } else if (valorDecimal < 0) {
+        return "Coloque um valor positivo!"
+    } else {
+        let str = [], cont = 0
+        while (valorDecimal > 0) {
+            str.unshift("" + valorDecimal%2)
+            valorDecimal = Math.floor(valorDecimal/2)
+            if (cont == 3 && valorDecimal != 0) {
+                str.unshift(" ")
+                cont = 0
+            } else {
+                cont++
+            }
         }
+        let valor = ""
+        str.forEach(value => {valor += value});
+        return valor
     }
-    let valor = ""
-    str.forEach(value => {valor += value});
-    return valor
 }
 
 function criarElemento(tipo, id, alvoID) {
@@ -22,12 +28,12 @@ function criarElemento(tipo, id, alvoID) {
     alvo.appendChild(elemento)
 }
 
-function maquinaEscreverAnimation(txt, elemento) {
+function maquinaEscreverAnimation(txt, elemento, time=75) {
     for (let i=0; i < txt.length; i++) {
         setTimeout(() => {
             let letra = document.createTextNode(txt[i])
             elemento.appendChild(letra)
-        }, 20 * i);
+        }, time * i);
     
     }
 }
@@ -47,7 +53,7 @@ btn.addEventListener("click", function(e) {
         criarElemento("p", "pResultado", "#resultado")
 
         const elementoPos = document.querySelector("#pResultado")
-        maquinaEscreverAnimation(bin, elementoPos)
+        maquinaEscreverAnimation(bin, elementoPos, 20)
 
         valorAnterior = valorDecimal
     } else if (valorAnterior != valorDecimal) {
@@ -58,7 +64,7 @@ btn.addEventListener("click", function(e) {
         // criando elemento novamente
         criarElemento("p", "pResultado", "#resultado")
         const elementoPos2 = document.querySelector("#pResultado")
-       maquinaEscreverAnimation(bin, elementoPos2)
+       maquinaEscreverAnimation(bin, elementoPos2, 20)
        
         valorAnterior = valorDecimal
     }
