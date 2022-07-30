@@ -41,14 +41,18 @@ main > h1 {
 
 #inputValor {
     text-align: center;
-    border-radius: 1.5em;
+    border-radius: 1.3em;
     opacity: 70%;
 }
 
 #converter {
-    border-radius: 1.5em;
+    border-radius: 1em;
     background-color: var(--cor2);
     color: white;
+}
+
+#converter:hover {
+    opacity: 80%;
 }
 
 #converter, #inputValor {
@@ -68,31 +72,31 @@ main > h1 {
     }
 
     main > h1 {
-        font-size: 200%;
-        height: 15vh;
-        margin-bottom: 4vh;
+        font-size: 2em;
+        margin-bottom: 40px;
+        padding: 20px;
     }
 
     #inputValor {
-        width: 70vw;
-        padding: 3vw;
-        font-size: 7vw;
+        width: 200px;
+        padding: 10px;
+        font-size: 1.4em;
         margin-bottom: 5vh;
     }
 
     #converter {
-        width: 50vw;
-        padding: 3vw;
-        font-size: 7vw;
-        margin-bottom: 4vh;
+        width: 200px;
+        padding: 10px;
+        font-size: 1.4em;
+        margin-bottom: 40px;
     }
 
     #resultado {
-        width: 70vw;
+        width: 200px;
         min-height: 100px;
-        margin: 5vw auto;
-        padding: 10vw;
-        font-size: 6vw;
+        margin: auto;
+        padding: 30px;
+        font-size: 1.3em;
     }
 }
 @media (min-width: 600px) and (max-width: 1000px) {
